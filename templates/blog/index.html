@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %} My Blog {% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/post.css' %}">
+<link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+
+    {% include "includes/header.html" %}
+
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blog/images/max.png' %}" alt="John The Author of This Blog">
+            <h2>JOHN'S BLOG</h2>
+        </header>
+        <p>Hi, I am John and I love ML and Optimization</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Posts</h2>
+        {% include "includes/posts_list.html" %}
+    </section>
+
+    <section id="about">
+        <h2>What I do</h2>
+        <p>I love ML and Optimization and Web Development</p>
+    </section>
+
+{% endblock %}

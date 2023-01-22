@@ -22,7 +22,7 @@ __pycache__/
 *.pyc
 
 # SQLite3 database file
-db.sqlite3
+# db.sqlite3
 
 # Log files
 *.log
